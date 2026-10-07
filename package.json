@@ -4,7 +4,7 @@
   "private": true,
   "description": "Bestower static storefront (no payment gateway / shipping API)",
   "scripts": {
-    "build": "pip3 install jinja2 && python3 build.py",
+    "build": "pip3 install -r requirements.txt && python3 build.py",
     "start": "python3 -m http.server 8080 --directory public",
     "dev": "python3 build.py && python3 -m http.server 8080 --directory public"
   }
