@@ -1,0 +1,154 @@
+[
+  {
+    "id": "kashmiri-mongra-saffron",
+    "name": "Kashmiri Mongra Saffron",
+    "category": "Saffron",
+    "origin": "Pampore, Kashmir",
+    "stock": true,
+    "price": 370,
+    "pack": "1 g glass jar",
+    "short": "Mongra grade Kashmiri saffron in a 1 g glass jar.",
+    "description": "Kashmiri saffron of Mongra grade, presented in a 1 g glass jar. Pampore, Kashmir is its origin reference. Use a few strands to bring colour and aroma to rice, desserts, milk and festive cooking.",
+    "details": [
+      [
+        "Grade",
+        "Mongra"
+      ],
+      [
+        "Origin",
+        "Pampore, Kashmir"
+      ],
+      [
+        "Net quantity",
+        "1 g"
+      ],
+      [
+        "Packaging",
+        "Glass jar"
+      ]
+    ],
+    "image": "assets/img/saffron.jpeg",
+    "position": "center",
+    "gallery": [
+      "assets/img/saffron.jpeg",
+      "assets/img/saffron-jar-studio.png",
+      "assets/img/saffron-ad.png",
+      "assets/img/saffron-jar.jpg"
+    ],
+    "fit": "contain"
+  },
+  {
+    "id": "kashmiri-walnut",
+    "name": "Kashmiri Walnut",
+    "category": "Nuts & Seeds",
+    "origin": "Kashmir",
+    "stock": false,
+    "price": 375,
+    "pack": "250 g",
+    "variants": [
+      {
+        "pack": "250 g",
+        "price": 375
+      },
+      {
+        "pack": "500 g",
+        "price": 750
+      },
+      {
+        "pack": "1 kg",
+        "price": 1500
+      }
+    ],
+    "short": "Walnuts from Kashmir, a staple of the Bestower collection.",
+    "description": "Walnuts from Kashmir, part of the Bestower collection of nuts and seeds. Available in 250 g, 500 g and 1 kg packs.",
+    "details": [
+      [
+        "Origin",
+        "Kashmir"
+      ],
+      [
+        "Category",
+        "Nuts & Seeds"
+      ]
+    ],
+    "image": "assets/img/walnut-pack.jpg",
+    "position": "center",
+    "gallery": [
+      "assets/img/walnut-pack.jpg",
+      "assets/img/walnut-bowl.png"
+    ],
+    "fit": "cover"
+  },
+  {
+    "id": "kashmiri-mamra-badam",
+    "name": "Kashmiri Mamra Badam",
+    "category": "Nuts & Seeds",
+    "origin": "Kashmir",
+    "stock": false,
+    "price": 375,
+    "pack": "250 g",
+    "variants": [
+      {
+        "pack": "250 g",
+        "price": 375
+      },
+      {
+        "pack": "500 g",
+        "price": 720
+      },
+      {
+        "pack": "1 kg",
+        "price": 1420
+      }
+    ],
+    "short": "Mamra almonds associated with Kashmir.",
+    "description": "Mamra almonds associated with Kashmir, part of the Bestower collection of nuts and seeds. Available in 250 g, 500 g and 1 kg packs.",
+    "details": [
+      [
+        "Origin",
+        "Kashmir"
+      ],
+      [
+        "Category",
+        "Nuts & Seeds"
+      ]
+    ],
+    "image": "assets/img/badam-pack.jpg",
+    "position": "center",
+    "gallery": [
+      "assets/img/badam-pack.jpg",
+      "assets/img/badam-bowl.png"
+    ],
+    "fit": "cover"
+  },
+  {
+    "id": "ladakhi-apricot",
+    "name": "Ladakhi Apricot",
+    "category": "Fruits & Dry Fruits",
+    "origin": "Ladakh",
+    "stock": false,
+    "price": null,
+    "pack": null,
+    "short": "Dried apricots from Ladakh.",
+    "description": "Dried apricots from Ladakh, part of the Bestower collection of fruits and dry fruits. This product is currently out of stock. Please check back soon or contact us to ask about availability.",
+    "details": [
+      [
+        "Origin",
+        "Ladakh"
+      ],
+      [
+        "Category",
+        "Fruits & Dry Fruits"
+      ]
+    ],
+    "image": "assets/img/apricot-pack.jpg",
+    "position": "center",
+    "gallery": [
+      "assets/img/apricot-pack.jpg",
+      "assets/img/apricot-1.jpg",
+      "assets/img/apricot-2.jpg",
+      "assets/img/apricot-3.jpg"
+    ],
+    "fit": "cover"
+  }
+]
