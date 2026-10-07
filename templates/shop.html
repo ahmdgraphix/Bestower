@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% import "components/product_card.html" as components %}
+
+{% block content %}
+<div class="wrap">
+    <div class="page-head">
+        <p class="eyebrow">Shop</p>
+        <h1>The Bestower collection</h1>
+        <p>Saffron, nuts, dry fruits and natural products, chosen with care. Out-of-stock items stay listed so you know what we offer.</p>
+    </div>
+    
+    <div id="collection" class="filters" role="group" aria-label="Filter by category">
+        <button class="on" data-cat="all">All</button>
+        {% for c in categories %}
+            <button data-cat="{{ c | e }}">{{ c | e }}</button>
+        {% endfor %}
+    </div>
+    
+    <div class="grid" id="product-grid">
+        {% for x in products %}
+            {{ components.card(x, fmt=fmt) }}
+        {% endfor %}
+    </div>
+    
+    <div class="empty" id="empty" hidden>New products in this category will be added soon.</div>
+    <div style="height:90px"></div>
+</div>
+{% endblock %}

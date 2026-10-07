@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+{% import "components/product_card.html" as components %}
+
+{% block content %}
+<div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="{{ p }}index.html">Home</a> / 
+        <a href="{{ p }}shop.html">Shop</a> / 
+        {{ x.name | e }}
+    </nav>
+    
+    <div class="pdp">
+        <div>
+            <div class="pdp-photo" id="pdp-photo">
+                {{ components.photo(x, p, lazy=False) }}
+                {% if x.stock %}
+                    <span class="badge in">Available</span>
+                {% else %}
+                    <span class="badge out">Out of stock</span>
+                {% endif %}
+            </div>
+            
+            {% if x.gallery and x.gallery | length > 1 %}
+                <div class="thumbs">
+                    {% for im in x.gallery %}
+                        <img src="{{ p }}{{ im }}" alt="{{ x.name | e }} view {{ loop.index }}" class="{% if loop.first %}on{% endif %}" loading="lazy"/>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        
+        <div class="pdp-info">
+            <p class="eyebrow">{{ x.category | e }} · {{ x.origin | e }}</p>
+            <h1>{{ x.name | e }}</h1>
+            <p class="lead">{{ x.description | e }}</p>
+            
+            {% if x.variants %}
+                <div class="pdp-price" id="pdp-price">{{ fmt(x.variants[0].price) }}</div>
+                <div class="packs" id="packs" role="group" aria-label="Pack size">
+                    {% for v in x.variants %}
+                        <button type="button" class="pack {% if loop.first %}on{% endif %}" data-pack="{{ v.pack | e }}" data-price="{{ v.price }}">{{ v.pack | e }}<small>{{ fmt(v.price) }}</small></button>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="pdp-price">{{ components.price_html(x, fmt) | striptags }}</div>
+            {% endif %}
+            
+            {% if x.stock %}
+                <div class="stock-line in">Available</div>
+            {% else %}
+                <div class="stock-line out">Out of stock</div>
+            {% endif %}
+            
+            <table class="facts">
+                <tbody>
+                    {% for k, v in rows %}
+                        <tr><th scope="row">{{ k | e }}</th><td>{{ v | e }}</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            
+            {% if x.stock %}
+                <div class="buy">
+                    <div class="qty">
+                        <button type="button" data-qty="-1" aria-label="Decrease quantity">−</button>
+                        <span id="qty">1</span>
+                        <button type="button" data-qty="1" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button class="btn btn-gold" id="add-to-cart" data-id="{{ x.id }}">Add to Cart</button>
+                    <button class="btn" id="buy-now" data-id="{{ x.id }}">Buy Now</button>
+                </div>
+            {% else %}
+                <div class="buy">
+                    <button class="btn btn-block" disabled>Out of Stock</button>
+                </div>
+                <div class="oos-note">This product is currently out of stock. Message us on WhatsApp to ask about availability.</div>
+            {% endif %}
+            
+            <div class="note-box">
+                <p><strong>Shipping:</strong> We deliver across India. Delivery charges and timing are shown at checkout. <a class="text-link" href="{{ p }}shipping-delivery.html">Shipping &amp; Delivery</a></p>
+                <p><strong>Need help?</strong> <a class="text-link" href="https://wa.me/{{ wa }}" target="_blank" rel="noopener">Chat on WhatsApp</a> or call <a class="text-link" href="tel:{{ phone_tel }}">{{ phone_display }}</a>.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

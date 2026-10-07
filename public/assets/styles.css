@@ -89,7 +89,7 @@ p{margin:0 0 1em}
 .card-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
 .card-cat{font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--gold-dark)}
 .card h3 a{text-decoration:none}
-.card-desc{color:var(--ink-2);font-size:16px;line-height:1.6;margin:0}
+.card-desc{color:var(--ink-2);font-size:16px;line-height:1.6;margin:0;flex-grow:1}
 .price{font-size:24px;font-weight:800;color:var(--ink)}
 .price small{font-size:14px;font-weight:600;color:var(--muted)}
 .stock-line{font-weight:800;font-size:15px}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="wrap">
+    <div class="page-head">
+        <p class="eyebrow">{{ title.split(' | ')[0] | e }}</p>
+        <h1>{{ h1 | safe }}</h1>
+        <p>{{ intro }}</p>
+    </div>
+    
+    <div class="prose {% if faq %}faq{% endif %}" style="padding-bottom:80px">
+        {% for q, a in sections %}
+            {% if faq %}
+                <details>
+                    <summary>{{ q }}</summary>
+                    <p>{{ a }}</p>
+                </details>
+            {% else %}
+                <h2>{{ q }}</h2>
+                <p>{{ a }}</p>
+            {% endif %}
+        {% endfor %}
+        
+        <p style="margin-top:40px"><a class="btn" href="contact.html">Contact Bestower</a></p>
+    </div>
+</div>
+{% endblock %}

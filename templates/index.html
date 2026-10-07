@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+{% import "components/product_card.html" as components %}
+
+{% block content %}
+<section aria-label="Welcome">
+    <div class="hero-media" id="hero-image">
+        <img class="slot-logo" src="assets/img/logo.png" alt="" aria-hidden="true"/>
+        <img class="fill" src="assets/img/origin.png" alt="Bestower saffron, dry fruits and natural products" fetchpriority="high" onerror="this.remove()"/>
+    </div>
+    <div class="wrap">
+        <div class="hero-copy">
+            <p class="eyebrow">From the finest origin at your table</p>
+            <h1>Authentic products. Remarkable origins.</h1>
+            <p class="lead">Discover carefully selected saffron, dry fruits and natural products sourced with a focus on quality, authenticity and origin.</p>
+            <div class="btn-row">
+                <a class="btn" href="shop.html">Shop Bestower</a>
+                <a class="btn btn-outline" href="shop.html#collection">Explore Our Collection</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="trust" aria-label="Why Bestower">
+    <div class="wrap trust-in">
+        {% for ico, title, text in trust %}
+            <div class="trust-item">
+                <span class="trust-ico">{{ ico | safe }}</span>
+                <strong>{{ title }}</strong>
+                <span class="trust-txt">{{ text }}</span>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="section">
+    <div class="wrap">
+        <div class="section-head">
+            <div>
+                <p class="eyebrow">Featured products</p>
+                <h2>The Bestower collection</h2>
+            </div>
+            <a class="text-link" href="shop.html">View all products</a>
+        </div>
+        <div class="grid">
+            {% for x in products %}
+                {{ components.card(x, shop_now=True, fmt=fmt) }}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section origin" id="origin">
+    <div class="wrap origin-in">
+        <div class="slot" id="origin-image">
+            <img class="slot-logo" src="assets/img/logo.png" alt="" aria-hidden="true"/>
+            <img class="fill" src="assets/img/origin.png" alt="Where a product comes from matters" onerror="this.remove()"/>
+        </div>
+        <div class="origin-copy">
+            <p class="eyebrow">Good things begin at the origin</p>
+            <h2>Where a product comes from matters.</h2>
+            <p style="margin-top:18px">From Kashmir’s saffron and walnuts to carefully selected products from other remarkable regions, Bestower focuses on products where origin, quality and careful selection come together.</p>
+            <p class="signature">From the finest origin at your table.</p>
+            <p style="margin-top:22px"><a class="btn" href="about.html">About</a></p>
+        </div>
+    </div>
+</section>
+
+<section class="cta-band">
+    <div class="wrap">
+        <h2>Questions about a product?</h2>
+        <p>We are happy to help with product information, availability and orders.</p>
+        <div class="btn-row">
+            <a class="btn" href="https://wa.me/{{ wa }}" target="_blank" rel="noopener">Chat on WhatsApp</a>
+            <a class="btn btn-outline" href="contact.html">Contact Bestower</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

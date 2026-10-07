@@ -84,7 +84,7 @@
     "name": "Kashmiri Mamra Badam",
     "category": "Nuts & Seeds",
     "origin": "Kashmir",
-    "stock": false,
+    "stock": true,
     "price": 375,
     "pack": "250 g",
     "variants": [

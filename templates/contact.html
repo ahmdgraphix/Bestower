@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="wrap">
+    <div class="page-head">
+        <p class="eyebrow">Contact</p>
+        <h1>We are here to help.</h1>
+        <p>Questions about a product, an order or availability? Reach Bestower Enterprises directly. For delivery questions, please include your PIN code; for an existing order, include your order number.</p>
+    </div>
+    
+    <div class="contact-grid">
+        <div class="contact-card">
+            <h3>Call or WhatsApp</h3>
+            <p><a href="tel:{{ phone_tel }}">{{ phone_display }}</a></p>
+        </div>
+        <div class="contact-card">
+            <h3>Email</h3>
+            <p><a href="mailto:{{ email }}">{{ email }}</a></p>
+        </div>
+        <div class="contact-card">
+            <h3>Based in</h3>
+            <p>Perambur, Chennai,<br/>Tamil Nadu, India</p>
+        </div>
+    </div>
+    
+    <div class="btn-row" style="justify-content:flex-start;padding-bottom:30px">
+        <a class="btn btn-gold" href="https://wa.me/{{ wa }}" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        <a class="btn btn-outline" href="mailto:{{ email }}">Send an email</a>
+    </div>
+    <p style="padding-bottom:80px;color:var(--muted)">Please do not share card, UPI PIN or other payment details over chat or email.</p>
+</div>
+{% endblock %}
